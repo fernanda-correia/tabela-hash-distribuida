@@ -69,6 +69,7 @@ void buscarAluno(std::vector<ChordNode> &chordNodes, const std::vector<int> &all
     std::cout << "Aluno não encontrado!\n";
 }
 
+
 void removerAluno(std::vector<ChordNode> &chordNodes, const std::vector<int> &allNodes)
 {
     std::cout << "\nDigite o RA do aluno que deseja remover: ";
@@ -127,11 +128,14 @@ int main()
         Aluno(3500, "Maria"),
         Aluno(6200, "Lucas"),
         Aluno(400, "Joao"),
-        Aluno(4050, "Fernanda")};
+        Aluno(4050, "Fernanda"),
+        Aluno(7004, "Gabriel"),
+        Aluno(7004, "Ana")};
 
     inserirAlunos(chordNodes, allNodes, alunos);
     buscarAluno(chordNodes, allNodes);
     removerAluno(chordNodes, allNodes);
+    std::cout << "Tabela após remoção:\n";
     imprimirEstadoNos(chordNodes);
 
     return 0;
